@@ -1,6 +1,6 @@
 Vagrant.configure("2") do |config|
 
-  (3..5).each do |containernumber|
+  (0..2).each do |containernumber|
     config.vm.define "container#{containernumber}" do |container|
       container.vm.hostname = "vault#{containernumber}"
       container.vm.network "forwarded_port", guest: 8200, host: "1822#{containernumber}"
